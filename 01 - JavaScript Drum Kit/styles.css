@@ -1,0 +1,140 @@
+html {
+    font-size: 10px;
+    background: url("./background.jpg") bottom center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.keys {
+    display: flex;
+    position: absolute;
+    top: 50vh;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.key {
+    border: 0.4rem solid black;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem 0.5rem;
+    transition: all 0.07s ease;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 0.5rem black;
+}
+
+.playing {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+}
+
+kbd {
+    display: block;
+    font-size: 4rem;
+}
+
+.sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #ffc600;
+}
+
+/*Prevents the text on the keys from being dragged by the cursor*/
+.disable-text-selection {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*Following is CSS for the volume slider*/
+.slider-cont {
+    position: absolute;
+    top: 30vh;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 30px 30px 30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider {
+    position: relative;
+    width: 200px;
+    height: 20px;
+    margin-right: 15px;
+}
+
+.slider input {
+    position: absolute;
+    left: -6px;
+    top: 0;
+    width: 212px;
+    height: 20px;
+    -webkit-appearance: none;
+    background-color: transparent;
+    z-index: 99;
+}
+
+.slider input:focus {
+    outline: none;
+}
+
+.slider input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 4px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    cursor: pointer;
+    border: 2px solid #000000;
+}
+
+.slider progress {
+    width: 200px;
+    height: 20px;
+    -webkit-appearance: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slider progress::-webkit-progress-bar {
+    background-color: #f0f0f0;
+}
+
+.slider progress::-webkit-progress-value {
+    background-color: #6d696e;
+}
+
+.sliderValue {
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-left: 10px;
+    text-align: center;
+}
